@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRAFT BARBER — Мужская парикмахерская и бритьё</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4efe6;
+            color: #141414;
+        }
+        .font-display {
+            font-family: 'Oswald', sans-serif;
+        }
+        .brutal-card {
+            background-color: #ffffff;
+            border: 2px solid #141414;
+            box-shadow: 5px 5px 0px #141414;
+        }
+        .brutal-card-sm {
+            background-color: #ffffff;
+            border: 2px solid #141414;
+            box-shadow: 3px 3px 0px #141414;
+        }
+        .brutal-btn {
+            border: 2px solid #141414;
+            box-shadow: 4px 4px 0px #141414;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.15s ease;
+        }
+        .brutal-btn:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 0px #141414;
+        }
+        .brutal-btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: 1px 1px 0px #141414;
+        }
+        .service-check:checked + .service-box {
+            background-color: #141414;
+            color: #f4efe6;
+        }
+        .service-check:checked + .service-box .service-meta {
+            color: #d6cfc2;
+        }
+        .service-check:checked + .service-box .service-price {
+            color: #f59e0b;
+        }
+        .service-check:checked + .service-box .check-indicator {
+            background-color: #c84b31;
+            border-color: #f4efe6;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#c84b31] selection:text-white">
+
+    <!-- Шапка -->
+    <header class="sticky top-0 z-50 bg-[#f4efe6]/95 backdrop-blur-sm border-b-2 border-[#141414]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#141414] text-[#f4efe6] font-display font-bold text-2xl flex items-center justify-center">
+                    K
+                </div>
+                <div>
+                    <span class="font-display font-bold text-2xl tracking-wide uppercase block leading-none">KRAFT BARBER</span>
+                    <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">Мужской клуб • С 2019</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
+                <a href="#builder" class="hover:text-[#c84b31] transition">Услуги и чек</a>
+                <a href="#masters" class="hover:text-[#c84b31] transition">Барберы</a>
+                <a href="#perks" class="hover:text-[#c84b31] transition">Атмосфера</a>
+                <a href="#contacts" class="hover:text-[#c84b31] transition">Контакты</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+79995554433" class="hidden lg:block text-sm font-bold hover:text-[#c84b31] transition">
+                    +7 (999) 555-44-33
+                </a>
+                <a href="#booking" class="brutal-btn bg-[#c84b31] text-white font-display uppercase tracking-wider text-sm px-5 py-2.5">
+                    Записаться
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Первый экран -->
+    <section class="py-14 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-block bg-[#141414] text-[#f4efe6] text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 mb-6">
+                        Скидка 20% на первый визит к любому мастеру
+                    </div>
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold uppercase leading-[0.98] tracking-tight mb-6">
+                        Стрижём так, что <span class="text-[#c84b31]">не нужно укладывать</span> час у зеркала
+                    </h1>
+                    <p class="text-base sm:text-lg text-stone-700 max-w-xl leading-relaxed mb-8 font-medium">
+                        Подбираем форму под тип волос и геометрию лица. Никакой спешки «по 15 минут на поток» — только точная работа, горячий компресс и правильный мужской сервис.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#builder" class="brutal-btn bg-[#c84b31] text-white font-display uppercase tracking-wider text-lg px-8 py-4 text-center">
+                            Собрать услуги и узнать цену
+                        </a>
+                        <a href="#masters" class="brutal-btn bg-white text-[#141414] font-display uppercase tracking-wider text-lg px-8 py-4 text-center">
+                            Выбрать время
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 max-w-lg pt-6 border-t-2 border-[#141414]">
+                        <div>
+                            <div class="font-display text-3xl font-bold">4.9 ★</div>
+                            <div class="text-xs font-semibold text-stone-600 uppercase mt-0.5">Рейтинг на Картах</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-3xl font-bold">60 мин</div>
+                            <div class="text-xs font-semibold text-stone-600 uppercase mt-0.5">На каждую стрижку</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-3xl font-bold">7 дней</div>
+                            <div class="text-xs font-semibold text-stone-600 uppercase mt-0.5">Гарантия на форму</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="brutal-card p-3 bg-white">
+                        <div class="aspect-[4/5] overflow-hidden border-2 border-[#141414] bg-stone-300">
+                            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80" alt="Работа барбера" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-3 flex items-center justify-between text-xs font-bold uppercase tracking-wider">
+                            <span>ул. Большая Дмитровка, 14</span>
+                            <span class="text-[#c84b31]">Открыто до 22:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Разделительная лента -->
+    <div class="bg-[#141414] text-[#f4efe6] py-3.5 border-y-2 border-[#141414] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between gap-4 text-xs sm:text-sm font-display uppercase tracking-widest">
+            <span>• Мужские стрижки</span>
+            <span>• Моделирование бороды</span>
+            <span>• Королевское бритьё</span>
+            <span>• Камуфляж седины</span>
+            <span>• Эспрессо и напитки бесплатно</span>
+        </div>
+    </div>
+
+    <!-- Интерактивный конструктор услуг и чек -->
+    <section id="builder" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c84b31]">Прайс-конструктор</span>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase mt-1">Соберите свой визит</h2>
+                <p class="text-stone-700 text-sm sm:text-base mt-2">Отметьте нужные услуги — чек справа автоматически посчитает итоговую сумму и время</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <!-- Список услуг -->
+                <div class="lg:col-span-7 space-y-3.5">
+                    <label class="block cursor-pointer">
+                        <input type="checkbox" class="service-check hidden" data-name="Мужская стрижка" data-price="1800" data-time="60" checked>
+                        <div class="service-box brutal-card-sm p-5 flex items-center justify-between transition">
+                            <div class="flex items-start gap-4">
+                                <div class="check-indicator w-6 h-6 border-2 border-[#141414] flex items-center justify-center font-bold text-sm mt-0.5 shrink-0">✓</div>
+                                <div>
+                                    <div class="font-bold text-base sm:text-lg">Мужская стрижка</div>
+                                    <div class="service-meta text-xs sm:text-sm text-stone-600 mt-0.5">Мытьё головы, стрижка ножницами и машинкой, укладка стайлингом • 60 мин</div>
+                                </div>
+                            </div>
+                            <span class="service-price font-display text-xl font-bold ml-4 whitespace-nowrap">1 800 ₽</span>
+                        </div>
+                    </label>
+
+                    <label class="block cursor-pointer">
+                        <input type="checkbox" class="service-check hidden" data-name="Моделирование бороды" data-price="1300" data-time="45">
+                        <div class="service-box brutal-card-sm p-5 flex items-center justify-between transition">
+                            <div class="flex items-start gap-4">
+                                <div class="check-indicator w-6 h-6 border-2 border-[#141414] flex items-center justify-center font-bold text-sm mt-0.5 shrink-0">✓</div>
+                                <div>
+                                    <div class="font-bold text-base sm:text-lg">Моделирование бороды и усов</div>
+                                    <div class="service-meta text-xs sm:text-sm text-stone-600 mt-0.5">Создание чётких контуров опасной бритвой, распаривание и масло • 45 мин</div>
+                                </div>
+                            </div>
+                            <span class="service-price font-display text-xl font-bold ml-4 whitespace-nowrap">1 300 ₽</span>
+                        </div>
+                    </label>
+
+                    <label class="block cursor-pointer">
+                        <input type="checkbox" class="service-check hidden" data-name="Королевское бритьё" data-price="1600" data-time="45">
+                        <div class="service-box brutal-card-sm p-5 flex items-center justify-between transition">
+                            <div class="flex items-start gap-4">
+                                <div class="check-indicator w-6 h-6 border-2 border-[#141414] flex items-center justify-center font-bold text-sm mt-0.5 shrink-0">✓</div>
+                                <div>
+                                    <div class="font-bold text-base sm:text-lg">Королевское бритьё</div>
+                                    <div class="service-meta text-xs sm:text-sm text-stone-600 mt-0.5">Традиционное бритьё шаветкой с горячими полотенцами и косметикой Proraso • 45 мин</div>
+                                </div>
+                            </div>
+                            <span class="service-price font-display text-xl font-bold ml-4 whitespace-nowrap">1 600 ₽</span>
+                        </div>
+                    </label>
+
+                    <label class="block cursor-pointer">
+                        <input type="checkbox" class="service-check hidden" data-name="Камуфляж седины" data-price="1500" data-time="30">
+                        <div class="service-box brutal-card-sm p-5 flex items-center justify-between transition">
+                            <div class="flex items-start gap-4">
+                                <div class="check-indicator w-6 h-6 border-2 border-[#141414] flex items-center justify-center font-bold text-sm mt-0.5 shrink-0">✓</div>
+                                <div>
+                                    <div class="font-bold text-base sm:text-lg">Камуфляж седины (голова или борода)</div>
+                                    <div class="service-meta text-xs sm:text-sm text-stone-600 mt-0.5">Естественное тонирование без эффекта «крашеных волос» • 30 мин</div>
+                                </div>
+                            </div>
+                            <span class="service-price font-display text-xl font-bold ml-4 whitespace-nowrap">1 500 ₽</span>
+                        </div>
+                    </label>
+
+                    <label class="block cursor-pointer">
+                        <input type="checkbox" class="service-check hidden" data-name="Уход за кожей лица (Black Mask)" data-price="900" data-time="20">
+                        <div class="service-box brutal-card-sm p-5 flex items-center justify-between transition">
+                            <div class="flex items-start gap-4">
+                                <div class="check-indicator w-6 h-6 border-2 border-[#141414] flex items-center justify-center font-bold text-sm mt-0.5 shrink-0">✓</div>
+                                <div>
+                                    <div class="font-bold text-base sm:text-lg">Детокс-уход за кожей лица</div>
+                                    <div class="service-meta text-xs sm:text-sm text-stone-600 mt-0.5">Очищающий скраб, угольная маска и увлажняющий бальзам • 20 мин</div>
+                                </div>
+                            </div>
+                            <span class="service-price font-display text-xl font-bold ml-4 whitespace-nowrap">900 ₽</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Живой чек (правая колонка) -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28">
+                    <div class="brutal-card bg-white p-6 sm:p-8">
+                        <div class="flex items-center justify-between pb-4 border-b-2 border-dashed border-stone-300">
+                            <div>
+                                <span class="font-display text-2xl font-bold uppercase">Ваш чек</span>
+                                <span class="block text-xs text-stone-500">KRAFT BARBER • Дмитровка</span>
+                            </div>
+                            <span class="px-2.5 py-1 bg-[#f4efe6] border border-[#141414] text-xs font-bold" id="total-time">60 мин</span>
+                        </div>
+
+                        <!-- Выбранные позиции -->
+                        <div id="receipt-items" class="py-5 space-y-2.5 text-sm border-b-2 border-dashed border-stone-300 min-h-[110px]">
+                            <!-- Заполняется скриптом -->
+                        </div>
+
+                        <!-- Переключатель скидки -->
+                        <div class="py-4 border-b-2 border-dashed border-stone-300">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <span class="text-sm font-bold">Я у вас впервые (скидка 20%)</span>
+                                <input type="checkbox" id="first-visit-toggle" class="w-5 h-5 accent-[#c84b31]" checked>
+                            </label>
+                        </div>
+
+                        <!-- Итого -->
+                        <div class="pt-5 pb-6 flex items-baseline justify-between">
+                            <span class="font-bold uppercase text-sm text-stone-600">Итого к оплате:</span>
+                            <div class="text-right">
+                                <span id="old-price" class="text-sm text-stone-400 line-through mr-2">1 800 ₽</span>
+                                <span id="final-price" class="font-display text-4xl font-bold text-[#c84b31]">1 440 ₽</span>
+                            </div>
+                        </div>
+
+                        <a href="#masters" class="brutal-btn block w-full bg-[#141414] hover:bg-[#c84b31] text-white font-display uppercase tracking-wider text-center py-4 text-base">
+                            Выбрать мастера и время &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мастера и слоты времени -->
+    <section id="masters" class="py-20 bg-[#ebe4d7] border-y-2 border-[#141414]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c84b31]">Команда</span>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase mt-1">Выберите барбера и свободное окно</h2>
+                <p class="text-stone-700 text-sm sm:text-base mt-2">Нажмите на удобное время под карточкой мастера — оно закрепится в форме записи</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Мастер 1 -->
+                <div class="brutal-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square mb-5 border-2 border-[#141414] overflow-hidden bg-stone-300">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Артём Громов" class="w-full h-full object-cover grayscale contrast-125">
+                        </div>
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-display text-2xl font-bold uppercase">Артём Громов</h3>
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 bg-[#141414] text-white">Шеф-барбер</span>
+                        </div>
+                        <p class="text-xs text-stone-600 font-medium mb-4">Опыт 8 лет • Сложные удлиненные стрижки и фейд</p>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase text-stone-500 mb-2">Свободно сегодня:</div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" onclick="selectSlot('Артём Громов', '13:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">13:00</button>
+                            <button type="button" onclick="selectSlot('Артём Громов', '16:30', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">16:30</button>
+                            <button type="button" onclick="selectSlot('Артём Громов', '19:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">19:00</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Мастер 2 -->
+                <div class="brutal-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square mb-5 border-2 border-[#141414] overflow-hidden bg-stone-300">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Денис Соколов" class="w-full h-full object-cover grayscale contrast-125">
+                        </div>
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-display text-2xl font-bold uppercase">Денис Соколов</h3>
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 bg-[#c84b31] text-white">Топ-барбер</span>
+                        </div>
+                        <p class="text-xs text-stone-600 font-medium mb-4">Опыт 5 лет • Классика, моделирование бороды и бритьё</p>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase text-stone-500 mb-2">Свободно сегодня:</div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" onclick="selectSlot('Денис Соколов', '12:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">12:00</button>
+                            <button type="button" onclick="selectSlot('Денис Соколов', '15:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">15:00</button>
+                            <button type="button" onclick="selectSlot('Денис Соколов', '20:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">20:00</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Мастер 3 -->
+                <div class="brutal-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square mb-5 border-2 border-[#141414] overflow-hidden bg-stone-300">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Максим Волков" class="w-full h-full object-cover grayscale contrast-125">
+                        </div>
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-display text-2xl font-bold uppercase">Максим Волков</h3>
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 bg-stone-200 border border-[#141414]">Барбер</span>
+                        </div>
+                        <p class="text-xs text-stone-600 font-medium mb-4">Опыт 3 года • Короткие стрижки, кроп и точный контур</p>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase text-stone-500 mb-2">Свободно сегодня:</div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" onclick="selectSlot('Максим Волков', '11:30', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">11:30</button>
+                            <button type="button" onclick="selectSlot('Максим Волков', '14:30', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">14:30</button>
+                            <button type="button" onclick="selectSlot('Максим Волков', '18:00', this)" class="slot-btn border-2 border-[#141414] py-2 text-xs font-bold hover:bg-[#141414] hover:text-white transition">18:00</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Атмосфера и преимущества -->
+    <section id="perks" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="brutal-card-sm p-7">
+                    <div class="font-display text-3xl font-bold text-[#c84b31] mb-2">01 / БАР</div>
+                    <h3 class="font-bold text-lg mb-2">Зерновой кофе и напитки</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">Приходите за 15 минут до записи: угостим свежим эспрессо, холодным лимонадом или напитками покрепче за наш счёт.</p>
+                </div>
+                <div class="brutal-card-sm p-7">
+                    <div class="font-display text-3xl font-bold text-[#c84b31] mb-2">02 / СТЕРИЛЬНОСТЬ</div>
+                    <h3 class="font-bold text-lg mb-2">Одноразовые лезвия и крафт-пакеты</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">Инструмент проходит 3 этапа очистки и сухожар. Новое лезвие вскрываем строго при вас перед началом работы.</p>
+                </div>
+                <div class="brutal-card-sm p-7">
+                    <div class="font-display text-3xl font-bold text-[#c84b31] mb-2">03 / ГАРАНТИЯ</div>
+                    <h3 class="font-bold text-lg mb-2">Коррекция в течение 7 дней</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">Если дома покажется, что чёлку нужно сделать чуть короче или поправить виски — бесплатно доработаем за 15 минут.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Финальная форма записи и контакты -->
+    <section id="booking" class="py-20 bg-[#141414] text-[#f4efe6]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5" id="contacts">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#c84b31]">Ждём в гости</span>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase mt-1 mb-6">Забронируй кресло онлайн</h2>
+                    <div class="space-y-4 text-sm text-stone-300 mb-8">
+                        <p><strong class="text-white">Адрес:</strong> г. Москва, ул. Большая Дмитровка, 14 (2 минуты от м. Чеховская)</p>
+                        <p><strong class="text-white">График:</strong> Ежедневно с 10:00 до 22:00</p>
+                        <p><strong class="text-white">Телефон:</strong> +7 (999) 555-44-33</p>
+                    </div>
+                    <div class="p-4 border border-stone-700 bg-stone-900/70 text-xs text-stone-400">
+                        Бесплатная парковка для гостей барбершопа во внутреннем дворе — просто сообщите номер авто администратору.
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-[#f4efe6] text-[#141414] border-2 border-white p-6 sm:p-10">
+                        <!-- Сводка заказа -->
+                        <div class="bg-white border-2 border-[#141414] p-4 mb-6">
+                            <div class="text-xs font-bold uppercase text-stone-500 mb-1">Детали вашей записи:</div>
+                            <div id="booking-summary-services" class="font-bold text-sm sm:text-base">Мужская стрижка — 1 440 ₽ (60 мин)</div>
+                            <div id="booking-summary-master" class="text-xs font-bold text-[#c84b31] mt-1">Мастер: Любой свободный • Время: Ближайшее</div>
+                        </div>
+
+                        <form id="barber-form" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase mb-1.5">Как вас зовут</label>
+                                    <input type="text" id="client-name" required placeholder="Дмитрий" class="w-full bg-white border-2 border-[#141414] px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#c84b31]">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase mb-1.5">Ваш телефон</label>
+                                    <input type="tel" required placeholder="+7 (___) ___-__-__" class="w-full bg-white border-2 border-[#141414] px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#c84b31]">
+                                </div>
+                            </div>
+                            <button type="submit" class="brutal-btn w-full bg-[#c84b31] text-white font-display uppercase tracking-wider text-lg py-4 mt-2">
+                                Подтвердить запись
+                            </button>
+                        </form>
+
+                        <!-- Талон после отправки -->
+                        <div id="barber-success" class="hidden bg-white border-2 border-[#141414] p-6 text-center">
+                            <div class="inline-block bg-[#141414] text-white font-display uppercase px-3 py-1 text-xs mb-3">Бронь подтверждена</div>
+                            <h3 class="font-display text-3xl font-bold uppercase mb-2" id="ticket-title">Ждём вас, Дмитрий!</h3>
+                            <p class="text-sm text-stone-600 mb-4" id="ticket-details"></p>
+                            <button type="button" onclick="resetBooking()" class="text-xs font-bold underline uppercase">Оформить еще одну запись</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-[#141414] text-stone-500 border-t border-stone-800 py-8 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span class="font-display text-white text-base uppercase tracking-wider">KRAFT BARBER</span>
+            <span>Демонстрационный сайт для портфолио • 2026</span>
+        </div>
+    </footer>
+
+    <!-- Скрипт чек-конструктора и выбора слотов -->
+    <script>
+        const serviceChecks = document.querySelectorAll('.service-check');
+        const firstVisitToggle = document.getElementById('first-visit-toggle');
+        const receiptItemsEl = document.getElementById('receipt-items');
+        const totalTimeEl = document.getElementById('total-time');
+        const oldPriceEl = document.getElementById('old-price');
+        const finalPriceEl = document.getElementById('final-price');
+        const summaryServicesEl = document.getElementById('booking-summary-services');
+        const summaryMasterEl = document.getElementById('booking-summary-master');
+
+        let selectedMaster = 'Любой свободный';
+        let selectedTime = 'Ближайшее окно';
+        let currentSummaryString = '';
+
+        function updateReceipt() {
+            let rawTotal = 0;
+            let totalMinutes = 0;
+            let names = [];
+            receiptItemsEl.innerHTML = '';
+
+            serviceChecks.forEach(chk => {
+                if (chk.checked) {
+                    const name = chk.dataset.name;
+                    const price = parseInt(chk.dataset.price, 10);
+                    const time = parseInt(chk.dataset.time, 10);
+
+                    rawTotal += price;
+                    totalMinutes += time;
+                    names.push(name);
+
+                    const row = document.createElement('div');
+                    row.className = 'flex justify-between items-center';
+                    row.innerHTML = `<span class="font-medium text-stone-800">${name}</span><span class="font-bold">${price.toLocaleString('ru-RU')} ₽</span>`;
+                    receiptItemsEl.appendChild(row);
+                }
+            });
+
+            if (names.length === 0) {
+                receiptItemsEl.innerHTML = '<div class="text-stone-400 text-xs italic">Выберите хотя бы одну услугу слева...</div>';
+            }
+
+            const hasDiscount = firstVisitToggle.checked && rawTotal > 0;
+            const finalTotal = hasDiscount ? Math.round(rawTotal * 0.8) : rawTotal;
+
+            totalTimeEl.textContent = `${totalMinutes} мин`;
+            finalPriceEl.textContent = `${finalTotal.toLocaleString('ru-RU')} ₽`;
+
+            if (hasDiscount) {
+                oldPriceEl.textContent = `${rawTotal.toLocaleString('ru-RU')} ₽`;
+                oldPriceEl.classList.remove('hidden');
+            } else {
+                oldPriceEl.classList.add('hidden');
+            }
+
+            const serviceListText = names.length > 0 ? names.join(' + ') : 'Услуги не выбраны';
+            currentSummaryString = `${serviceListText} — ${finalTotal.toLocaleString('ru-RU')} ₽ (${totalMinutes} мин)`;
+            summaryServicesEl.textContent = currentSummaryString;
+        }
+
+        serviceChecks.forEach(chk => chk.addEventListener('change', updateReceipt));
+        firstVisitToggle.addEventListener('change', updateReceipt);
+
+        function selectSlot(master, time, btn) {
+            document.querySelectorAll('.slot-btn').forEach(b => {
+                b.classList.remove('bg-[#c84b31]', 'text-white');
+            });
+            btn.classList.add('bg-[#c84b31]', 'text-white');
+
+            selectedMaster = master;
+            selectedTime = time;
+            summaryMasterEl.textContent = `Мастер: ${selectedMaster} • Время: сегодня в ${selectedTime}`;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('barber-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const clientName = document.getElementById('client-name').value.trim() || 'Гость';
+            document.getElementById('ticket-title').textContent = `Ждём вас, ${clientName}!`;
+            document.getElementById('ticket-details').textContent = `${currentSummaryString} • Мастер: ${selectedMaster} (${selectedTime})`;
+
+            this.classList.add('hidden');
+            document.getElementById('barber-success').classList.remove('hidden');
+        });
+
+        function resetBooking() {
+            document.getElementById('barber-success').classList.add('hidden');
+            document.getElementById('barber-form').classList.remove('hidden');
+        }
+
+        updateReceipt();
+    </script>
+</body>
+</html>
